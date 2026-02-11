@@ -26,7 +26,7 @@ EOT
     servicebus_namespace      = string
     stream_analytics_job_name = string
     topic_name                = string
-    authentication_mode       = optional(string, "ConnectionString")
+    authentication_mode       = optional(string) # Default: "ConnectionString"
     property_columns          = optional(list(string))
     shared_access_policy_key  = optional(string)
     shared_access_policy_name = optional(string)
