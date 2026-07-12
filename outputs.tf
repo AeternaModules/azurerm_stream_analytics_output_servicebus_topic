@@ -1,3 +1,7 @@
+output "stream_analytics_output_servicebus_topics_id" {
+  description = "Map of id values across all stream_analytics_output_servicebus_topics, keyed the same as var.stream_analytics_output_servicebus_topics"
+  value       = { for k, v in azurerm_stream_analytics_output_servicebus_topic.stream_analytics_output_servicebus_topics : k => v.id }
+}
 output "stream_analytics_output_servicebus_topics_authentication_mode" {
   description = "Map of authentication_mode values across all stream_analytics_output_servicebus_topics, keyed the same as var.stream_analytics_output_servicebus_topics"
   value       = { for k, v in azurerm_stream_analytics_output_servicebus_topic.stream_analytics_output_servicebus_topics : k => v.authentication_mode }
